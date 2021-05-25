@@ -1,0 +1,20 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    "inline-react-svg",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@lib": "./lib",
+          "@components": "./components",
+          "@pages": "/pages",
+          "@styles": "/styles",
+          "@data": "/data"
+        }
+      }
+    ]
+  ]
+}
