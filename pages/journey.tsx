@@ -1,21 +1,10 @@
 import React from "react";
-import Layout from "@components/organism/Layout/Layout";
-import { SimpleGrid, Box } from "@chakra-ui/react"
+import JourneyPage from "@components/templates/journey/index";
 
-const Journey: React.FC = ({ children }) => {
+export default function Journey({ children }){
     return (
         <>
-            <Layout>
-                <SimpleGrid columns={2} spacing={10}>
-                    <Box bg="tomato" height="80px"></Box>
-                    <Box bg="tomato" height="80px"></Box>
-                    <Box bg="tomato" height="80px"></Box>
-                    <Box bg="tomato" height="80px">Journey</Box>
-                    <Box bg="tomato" height="80px"></Box>
-                </SimpleGrid>
-            </Layout>
+            <JourneyPage/>
         </>
     );
 };
-
-export default Journey;

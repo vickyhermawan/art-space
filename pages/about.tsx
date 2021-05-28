@@ -1,21 +1,10 @@
 import React from "react";
-import Layout from "@components/organism/Layout/Layout";
-import { SimpleGrid, Box } from "@chakra-ui/react"
+import AboutPage from "@components/templates/about/index";
 
-const About: React.FC = ({ children }) => {
+export default function About({ children }){
     return (
         <>
-            <Layout>
-                <SimpleGrid columns={2} spacing={10}>
-                    <Box bg="tomato" height="80px"></Box>
-                    <Box bg="tomato" height="80px"></Box>
-                    <Box bg="tomato" height="80px"></Box>
-                    <Box bg="tomato" height="80px">About</Box>
-                    <Box bg="tomato" height="80px"></Box>
-                </SimpleGrid>
-            </Layout>
+            <AboutPage />
         </>
     );
 };
-
-export default About;
