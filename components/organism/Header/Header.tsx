@@ -38,7 +38,7 @@ const Header: React.FC = props => {
                 {...props}
             >
                 <Flex align="center" mr={5}>
-                    <Heading as="h1" size="md" letterSpacing={"-.0.01rem"} fontSize={{ base: "10", md: "md", sm: "md", lg: "md" }}>
+                    <Heading as="h1" size="md" letterSpacing={"-.0.01rem"} fontSize={{ base: "sm", md: "md", sm: "md", lg: "md" }}>
                         <Link href="/">Vihermawan</Link>
                     </Heading>
                 </Flex>

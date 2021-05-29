@@ -1,6 +1,6 @@
 import React from "react";
 import {AchievementsProps} from '@components/organism/Timeline/type';
-import { CheckCircleIcon } from '@chakra-ui/icons';
+import { CheckCircleIcon, TimeIcon } from '@chakra-ui/icons';
 import { List, HStack, ListItem, VStack, Flex,Text,Heading,Center,Circle } from '@chakra-ui/react';
 
 export default function Achievements ({ achievements }: AchievementsProps) {
@@ -27,7 +27,7 @@ export default function Achievements ({ achievements }: AchievementsProps) {
                         width='1px'
                         bottom={0}
                         zIndex={-1}
-                        h={isLastElement ? "0" : "full"}
+                        height={isLastElement ? 5 : 'unset'}
                         position='absolute'
                         backgroundColor='gray.100'
                     />
@@ -49,20 +49,22 @@ export default function Achievements ({ achievements }: AchievementsProps) {
                     width='full'
                     spacing={2}
                     textAlign='left'
+                    p={3}
                   >
                     <Heading
                       width='full'
-                      size='xs'
+                      fontSize='sm'
                       textAlign='left'
                     >
                       {title}
                     </Heading>
   
                     <Text
-                      size='sm'
+                      fontSize="small"
                       width='full'
                       variant='regular'
                       textAlign='left'
+                      color="gray.500"
                     >
                       {description}
                     </Text>
