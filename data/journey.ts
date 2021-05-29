@@ -5,7 +5,7 @@ const Timeline: TimelineContentProps[] = [
        year: `2021`,
        achievements: [
             {
-                title : `Joined Aino As Fullstack Developer 🌿`,
+                title : `Got Job Fulltime 🌿`,
                 description: `Hired as Fulltime Fullstack Developer in Aino. Waiting for a new challenge in Aino and learn more in here.`
             },
        ]
