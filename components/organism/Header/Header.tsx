@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 import React, { useState, useEffect } from "react";
-import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure, Divider, Spacer, Kbd } from '@chakra-ui/react';
+import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure, HStack, Spacer, Kbd } from '@chakra-ui/react';
 import {
     Modal,
     ModalOverlay,
@@ -14,6 +15,7 @@ import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 const MenuItems = dynamic(() => import('@components/atoms/MenuItems/MenuItems'))
 
 const Header: React.FC = props => {
+    const router = useRouter();
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [scrollActive, setScrollActive] = useState<Boolean>(false);
@@ -21,6 +23,21 @@ const Header: React.FC = props => {
     useEffect(() => {
         window.addEventListener("scroll", () => {
             setScrollActive(window.scrollY > 20);
+        });
+        window.addEventListener('keypress', e => {
+            if(e.key === 'H' || e.key === 'h'){
+                onClose();
+                router.push('/home')
+            }else if(e.key === 'J' || e.key === 'j'){
+                onClose();
+                router.push('/journey')
+            }else if(e.key === 'P' || e.key === 'p'){
+                onClose();
+                router.push('/project')
+            }else if(e.key === 'A' || e.key === 'a'){
+                onClose();
+                router.push('/about')
+            }
         });
     }, []);
 
@@ -83,70 +100,64 @@ const Header: React.FC = props => {
             >
                 <ModalOverlay />
                 <ModalContent>
-                    {/* <ModalBody>
+                    <ModalBody>
                         <Flex
                             align="center"
                             width="full"
                             wrap="wrap"
                             heigth="full"
                         >
-                            <LinkScroll
-                                activeClass="active"
-                                to="prolouge"
-                                spy={true}
-                                smooth={true}
-                                duration={1000}
-                            >
-                                <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
-                                    <Text fontSize="xs" paddingX="1" fontWeight="bold"> Prolouge</Text>
-                                </Box>
-                            </LinkScroll>
+                            <Box as="button" textAlign="left">
+                                <Text fontSize="xs" paddingX="1" fontWeight="bold"> Home</Text>
+                            </Box>
                             <Spacer />
-                            <Kbd marginRight="1">D</Kbd>
-                            <Divider />
-                            <LinkScroll
-                                activeClass="active"
-                                to="achievement"
-                                spy={true}
-                                smooth={true}
-                                duration={1000}
-                            >
-                                <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
-                                    <Text fontSize="xs" paddingX="1" fontWeight="bold">Achievement</Text>
-                                </Box>
-                            </LinkScroll>
-                            <Spacer />
-                            <Kbd marginRight="1">P</Kbd>
-                            <Divider />
-                            <LinkScroll
-                                activeClass="active"
-                                to="gallery"
-                                spy={true}
-                                smooth={true}
-                                duration={1000}
-                            >
-                                <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
-                                    <Text fontSize="xs" paddingX="1" fontWeight="bold">Gallery</Text>
-                                </Box>
-                            </LinkScroll>
-                            <Spacer />
-                            <Kbd marginRight="1">N</Kbd>
-                            <Divider />
-                            <LinkScroll
-                                activeClass="active"
-                                to="song"
-                                spy={true}
-                                smooth={true}
-                                duration={1000}
-                            >
-                                <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
-                                    <Text fontSize="xs" paddingX="1" fontWeight="bold"> Songs</Text>
-                                </Box>
-                            </LinkScroll>
-                            <Spacer />
-                            <Kbd marginRight="1">G</Kbd>
+                            <Box>
+                                <Kbd marginRight="1">#</Kbd>
+                            </Box>
                         </Flex>
-                    </ModalBody> */}
+                        <Flex
+                            align="center"
+                            width="full"
+                            wrap="wrap"
+                            heigth="full"
+                        >
+                            <Box as="button" textAlign="left">
+                                <Text fontSize="xs" paddingX="1" fontWeight="bold"> Journey</Text>
+                            </Box>
+                            <Spacer />
+                            <Box>
+                                <Kbd marginRight="1">J</Kbd>
+                            </Box>
+                        </Flex>
+                        <Flex
+                            align="center"
+                            width="full"
+                            wrap="wrap"
+                            heigth="full"
+                        >
+                            <Box as="button" textAlign="left">
+                                <Text fontSize="xs" paddingX="1" fontWeight="bold"> Project</Text>
+                            </Box>
+                            <Spacer />
+                            <Box>
+                                <Kbd marginRight="1">P</Kbd>
+                            </Box>
+                        </Flex>
+                        <Flex
+                            align="center"
+                            width="full"
+                            wrap="wrap"
+                            heigth="full"
+                        >
+                            <Box as="button" textAlign="left">
+                                <Text fontSize="xs" paddingX="1" fontWeight="bold"> About</Text>
+                            </Box>
+                            <Spacer />
+                            <Box>
+                                <Kbd marginRight="1">A</Kbd>
+                            </Box>
+                        </Flex>
+                    </ModalBody>
                 </ModalContent>
             </Modal>
         </>
