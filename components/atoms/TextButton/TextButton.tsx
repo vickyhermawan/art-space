@@ -9,7 +9,7 @@ export interface Props {
     children: React.ReactNode;
 }
 
-const TextButton: React.FC = ({ color, icon, onClick, size = "sm", children }: Props) => {
+const TextButton: React.FC = ({ icon, onClick, size = "sm", children }: Props) => {
     return (
         <>
             <Button colorScheme="facebook" leftIcon={icon} onClick={onClick} size={size}>
