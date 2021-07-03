@@ -13,6 +13,21 @@ const Layout = ({ children }) => {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="Description" content="This Website is a resume of Vicky Hermawan" />
           <meta name="theme-color" content="#317EFB" />
+          <link rel="icon" href="/favicon.ico" />
+          <link
+            href="/images/icons/favicon-16x16.png"
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+          />
+          <link
+            href="/images/icons/favicon-32x32.png"
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+          />
+          <link rel="apple-touch-icon" href="/icons/apple-icon.png"></link>
+          <link rel="manifest" href="/manifest.json" />
       </Head>
       <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
