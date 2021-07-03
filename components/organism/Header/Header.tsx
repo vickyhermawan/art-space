@@ -2,14 +2,13 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import React, { useState, useEffect } from "react";
-import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure, HStack, Spacer, Kbd } from '@chakra-ui/react';
+import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure, Spacer, Kbd } from '@chakra-ui/react';
 import {
     Modal,
     ModalOverlay,
     ModalContent,
     ModalBody,
 } from "@chakra-ui/react";
-import { Link as LinkScroll } from "react-scroll";
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 
 const MenuItems = dynamic(() => import('@components/atoms/MenuItems/MenuItems'))

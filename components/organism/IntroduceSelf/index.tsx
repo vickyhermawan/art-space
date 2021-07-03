@@ -1,7 +1,7 @@
 import React from "react";
 import Fade from 'react-reveal/Fade';
 import {ListStackProps} from '@components/organism/IntroduceSelf/type';
-import { Container,Grid, GridItem,Image,Text,Heading, List, ListItem,Link, Center,Stack,Button } from "@chakra-ui/react";
+import { Container,Grid, GridItem,Image,Text,Heading, List, ListItem,Link } from "@chakra-ui/react";
 
 export default function IntoduceSelf({listStack}: ListStackProps){
     return (
