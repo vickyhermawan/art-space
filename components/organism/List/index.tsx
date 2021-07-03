@@ -1,42 +1,85 @@
 import React from "react";
-import { Container, Grid, GridItem,Text,Heading,Image } from "@chakra-ui/react";
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import {PortofolioProps} from '@components/organism/List/type';
+import { Container, Flex,Grid, GridItem,Heading,Image,Text ,Box,Tag,List,ListItem,Link } from "@chakra-ui/react";
 
-export default function List({}){
+export default function ListPortofolio({portofolio}: PortofolioProps){
     return (
-        <>
-            <Container maxW="7xl" centerContent paddingLeft={{ base :"7", md:"20", lg:"40"}} paddingRight={{ base :"7", md:"20", lg:"40"}} paddingBottom={{ base :"10"}}>
-                <Grid
-                    h="min-content"
-                    w="full"
-                    templateRows="repeat(3, 1fr)"
-                    templateColumns="repeat(8, 1fr)"
-                    gap={4}
-                    mb="4"
-                >
-                    <GridItem rowSpan={3} colSpan={{ base: 8, lg: 4 }} w="full" h="full" bg="red">
-                    <Image boxSize="200px" src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
-                    <Heading
-                      width='full'
-                      fontSize={{base: "small", md:"medium"}}
-                      textAlign='left'
-                    >
-                      Information System PSKS
-                    </Heading>
-                    <Text
-                      fontSize={{base: "small", md:"medium"}}
-                      width='full'
-                      variant='regular'
-                      textAlign='left'
-                      color="gray.500"
-                    >
-                        PSKS is an information system used by the Ministry of Social Affairs to collect data on the community environment.
-                    </Text>
-                    </GridItem>
-                    <GridItem rowSpan={3} colSpan={{ base: 8, lg: 4 }} w="full" h="full" bg="red">
-                        
-                    </GridItem>
-                </Grid>
-            </Container>
+        <> 
+            <Container maxW="6xl" centerContent paddingLeft={{ base :"7", md:"20", lg:"40"}} paddingRight={{ base :"7", md:"20", lg:"40"}} paddingBottom={{ base :"10"}}>
+            <List paddingBottom={4}>
+            {
+                (portofolio ?? []).map(({ title,description,link,image,tags },index) => {
+                const isLastElement = index === portofolio.length - 1
+                const shouldConnectDots = portofolio.length > 1
+                return (
+                    <ListItem
+                        key={title}
+                        zIndex={1}
+                        paddingTop={4}
+                        position='relative'
+                    >   
+                        {
+                            shouldConnectDots ?  
+                            <Flex
+                                width="full"
+                                zIndex={-1}
+                                height='0.5px'
+                                backgroundColor='gray.100'
+                            /> : null 
+                        }
+                        <Grid
+                            width="full"
+                            templateRows="repeat(3, 1fr)"
+                            templateColumns="repeat(12, 1fr)"
+                            pt="3" 
+                            pb="3"
+                            gap={4}
+                        >
+                            <GridItem rowSpan={3} colSpan={{base: 12, sm : 8}}>
+                                <Box p="2">
+                                    <Link href={link} isExternal><Heading size="md">{title} <ExternalLinkIcon w={4} h={4}/></Heading></Link>
+                                    <Text
+                                    fontSize={{base: "small", md:"medium"}}
+                                    width='full'
+                                    variant='regular'
+                                    pb={2}
+                                    >
+                                    {description}
+                                    </Text>
+                                    {(tags ?? []).map(({ tag }) => (
+                                        <Tag size="sm" mr={2}>{tag}</Tag>
+                                    ))}
+                                </Box>
+                            </GridItem>
+                            <GridItem rowSpan={3} colSpan={{base: 12, sm : 4}}>
+                                <Image 
+                                     boxSize="full"
+                                     objectFit="cover"
+                                     borderRadius="md"
+                                     width="full"
+                                     height="full" 
+                                     src={image}
+                                     alt="Dan Abramov" 
+                                     loading="lazy"
+                                />
+                            </GridItem>
+                        </Grid>
+                        {
+                            isLastElement ?  
+                            <Flex
+                                width="full"
+                                zIndex={-1}
+                                height='0.5px'
+                                backgroundColor='gray.100'
+                            /> : null 
+                        }
+                    </ListItem>
+                    )
+                })
+              }
+              </List>
+        </Container>
         </>
     );
 }

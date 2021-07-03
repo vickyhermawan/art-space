@@ -20,9 +20,9 @@ const MenuItems: React.FC = ({ children }) => {
             }
         }else{
             if(router.asPath === '/' && children === 'Home'){
-                setColor("green.400")
+                setColor("teal.200")
             }else if(router.asPath === `/${string.toLowerCase()}`){
-               setColor("green.400")
+               setColor("teal.200")
             }else{
                setColor("white")
             }
