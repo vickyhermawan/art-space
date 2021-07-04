@@ -109,7 +109,7 @@ const Header: React.FC = props => {
                             wrap="wrap"
                             heigth="full"
                         >
-                            <Box as="button" textAlign="left" aria-label="button-modal">
+                            <Box as="button" textAlign="left" aria-label="button-modal" onClick={()=>router.push('/home')}>
                                 <Text fontSize="xs" paddingX="1" fontWeight="bold"> Home</Text>
                             </Box>
                             <Spacer />
@@ -123,7 +123,7 @@ const Header: React.FC = props => {
                             wrap="wrap"
                             heigth="full"
                         >
-                            <Box as="button" textAlign="left" aria-label="button-modal">
+                            <Box as="button" textAlign="left" aria-label="button-modal" onClick={()=>router.push('/journey')}>
                                 <Text fontSize="xs" paddingX="1" fontWeight="bold"> Journey</Text>
                             </Box>
                             <Spacer />
@@ -137,7 +137,7 @@ const Header: React.FC = props => {
                             wrap="wrap"
                             heigth="full"
                         >
-                            <Box as="button" textAlign="left" aria-label="button-modal">
+                            <Box as="button" textAlign="left" aria-label="button-modal" onClick={()=>router.push('/project')}>
                                 <Text fontSize="xs" paddingX="1" fontWeight="bold"> Project</Text>
                             </Box>
                             <Spacer />
@@ -151,7 +151,7 @@ const Header: React.FC = props => {
                             wrap="wrap"
                             heigth="full"
                         >
-                            <Box as="button" textAlign="left" aria-label="button-modal">
+                            <Box as="button" textAlign="left" aria-label="button-modal" onClick={()=>router.push('/about')}>
                                 <Text fontSize="xs" paddingX="1" fontWeight="bold"> About</Text>
                             </Box>
                             <Spacer />
