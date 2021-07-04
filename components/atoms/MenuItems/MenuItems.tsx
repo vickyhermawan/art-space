@@ -39,6 +39,7 @@ const MenuItems: React.FC = ({ children }) => {
                 backgroundColor="transparent" 
                 onClick={()=> router.push(string.toLowerCase())}
                 color={color}
+                aria-label="button-header"
             >
                 {children}
             </Button>

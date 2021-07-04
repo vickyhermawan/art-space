@@ -9,13 +9,13 @@ const Footer: React.FC = ({children}) => {
             <Box pt="4" pb="4" bottom="0" position="relative" as="footer" textAlign="center">
                 <Center mb={2}>
                     <Stack direction="row" spacing={4}>
-                        <Link href="https://twitter.com/vihermawan" isExternal>
-                            <Button colorScheme="teal" variant="outline" size="xs">
+                        <Link href="https://twitter.com/vihermawan" isExternal aria-label="link-twitter">
+                            <Button colorScheme="teal" variant="outline" size="xs" aria-label="button-twitter">
                                 <FaTwitter />
                             </Button>
                         </Link>
-                        <Link href="https://www.linkedin.com/in/vicky-hermawan/" isExternal>
-                            <Button colorScheme="teal" variant="outline" size="xs">
+                        <Link href="https://www.linkedin.com/in/vicky-hermawan/" isExternal aria-label="link-linkedin">
+                            <Button colorScheme="teal" variant="outline" size="xs" aria-label="button-linkedin">
                                 <FaLinkedin />
                             </Button>
                         </Link>

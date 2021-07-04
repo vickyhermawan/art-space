@@ -12,7 +12,7 @@ export interface Props {
 const TextButton: React.FC = ({ icon, onClick, size = "sm", children }: Props) => {
     return (
         <>
-            <Button colorScheme="facebook" leftIcon={icon} onClick={onClick} size={size}>
+            <Button colorScheme="facebook" leftIcon={icon} onClick={onClick} size={size} aria-label="button-text">
                 {children}
             </Button>
         </>

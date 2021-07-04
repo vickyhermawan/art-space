@@ -25,13 +25,13 @@ const Hero : React.FC = props =>{
                     <Fade duration={700} distance="30px" fraction={0.4} bottom>
                         <Center mt="2.5">
                             <Stack direction="row" spacing={4}>
-                                <Link href="https://drive.google.com/file/d/1s1ePLn7bXT3M25hLKPybgU66O5xnRCca/view" isExternal>
-                                    <Button leftIcon={<DownloadIcon />} colorScheme="teal" variant="solid" size="sm" onClick={()=> play()}>
+                                <Link href="https://drive.google.com/file/d/1s1ePLn7bXT3M25hLKPybgU66O5xnRCca/view" isExternal aria-label="link-portofolio">
+                                    <Button leftIcon={<DownloadIcon />} colorScheme="teal" variant="solid" size="sm" onClick={()=> play()} aria-label="button-hero">
                                         Portofolio
                                     </Button>
                                 </Link>
-                                <Link href="https://twitter.com/vihermawan" isExternal>
-                                    <Button rightIcon={<FaTwitter />} colorScheme="teal" variant="outline" size="sm" onClick={()=> play()}>
+                                <Link href="https://twitter.com/vihermawan" isExternal aria-label="link-twitter">
+                                    <Button rightIcon={<FaTwitter />} colorScheme="teal" variant="outline" size="sm" onClick={()=> play()} aria-label="button-hero">
                                         Connect
                                     </Button>
                                 </Link>

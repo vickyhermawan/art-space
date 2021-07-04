@@ -41,12 +41,12 @@ export default function ListPortofolio({portofolio}: PortofolioProps){
                                 <GridItem rowSpan={3} colSpan={{base: 12, sm : 8}}>
 
                                     <Box p="2">
-                                        <Link href={link} isExternal><Heading size="md">{title} <ExternalLinkIcon w={4} h={4}/></Heading></Link>
+                                        <Link href={link} isExternal aria-label={title}><Heading size="md">{title} <ExternalLinkIcon w={4} h={4}/></Heading></Link>
                                         <Text
-                                        fontSize={{base: "small", md:"medium"}}
-                                        width='full'
-                                        variant='regular'
-                                        pb={2}
+                                            fontSize={{base: "small", md:"medium"}}
+                                            width='full'
+                                            variant='regular'
+                                            pb={2}
                                         >
                                         {description}
                                         </Text>

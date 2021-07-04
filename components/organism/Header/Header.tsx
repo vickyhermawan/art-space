@@ -90,7 +90,7 @@ const Header: React.FC = props => {
                 </Box>
                 <Box display={{ base: "block", md: "none", lg: "none" }}>
                     <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />} onClick={()=>handleDarkMode()} aria-label="button" />
-                    <Button size="xs" bg="transparent" onClick={onOpen}>👋</Button>
+                    <Button size="xs" bg="transparent" onClick={onOpen} aria-label="button-modal">👋</Button>
                 </Box>
             </Flex>
             <Modal
@@ -109,7 +109,7 @@ const Header: React.FC = props => {
                             wrap="wrap"
                             heigth="full"
                         >
-                            <Box as="button" textAlign="left">
+                            <Box as="button" textAlign="left" aria-label="button-modal">
                                 <Text fontSize="xs" paddingX="1" fontWeight="bold"> Home</Text>
                             </Box>
                             <Spacer />
@@ -123,7 +123,7 @@ const Header: React.FC = props => {
                             wrap="wrap"
                             heigth="full"
                         >
-                            <Box as="button" textAlign="left">
+                            <Box as="button" textAlign="left" aria-label="button-modal">
                                 <Text fontSize="xs" paddingX="1" fontWeight="bold"> Journey</Text>
                             </Box>
                             <Spacer />
@@ -137,7 +137,7 @@ const Header: React.FC = props => {
                             wrap="wrap"
                             heigth="full"
                         >
-                            <Box as="button" textAlign="left">
+                            <Box as="button" textAlign="left" aria-label="button-modal">
                                 <Text fontSize="xs" paddingX="1" fontWeight="bold"> Project</Text>
                             </Box>
                             <Spacer />
@@ -151,7 +151,7 @@ const Header: React.FC = props => {
                             wrap="wrap"
                             heigth="full"
                         >
-                            <Box as="button" textAlign="left">
+                            <Box as="button" textAlign="left" aria-label="button-modal">
                                 <Text fontSize="xs" paddingX="1" fontWeight="bold"> About</Text>
                             </Box>
                             <Spacer />

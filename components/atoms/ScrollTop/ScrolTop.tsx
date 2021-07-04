@@ -28,7 +28,7 @@ const ScrollTopArrow = () => {
 
   return (
     <>
-      <Button rightIcon={<FaArrowCircleUp />} bg="teal" onClick={scrollTop} position="fixed" className={style.scrollTop} style={{ display: showScroll ? 'flex' : 'none' }} size="xs">
+      <Button rightIcon={<FaArrowCircleUp />} bg="teal" onClick={scrollTop} position="fixed" className={style.scrollTop} style={{ display: showScroll ? 'flex' : 'none' }} size="xs" aria-label="button-scroll">
         Back to Top
       </Button>
     </>

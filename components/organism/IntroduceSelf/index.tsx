@@ -33,9 +33,9 @@ export default function IntoduceSelf({listStack}: ListStackProps){
                         <Fade duration={500} distance="30px" delay={300} fraction={0.4} bottom>
                             <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "xs", md: "xs", lg: "sm" }} textAlign={{ base: "center", md: "justify" }}>
                                 Hello, I'm Vicky Hermawan, who can be called Vicky. Currently, i am domiciled in Yogyakarta 
-                                and studying at <Link href="https://ugm.ac.id/" isExternal color="teal.500">Gadjah Mada University</Link> and working at a fintech company in Yogyakarta. 
+                                and studying at <Link href="https://ugm.ac.id/" isExternal color="teal.500" aria-label="link-ugm">Gadjah Mada University</Link> and working at a fintech company in Yogyakarta. 
                                 I started working for the first time using the php programming language and the <Link href="https://laravel.com/" isExternal color="teal.500">Laravel</Link> framework. 
-                                After that I tried to learn other things like  <Link href="https://expressjs.com/" isExternal color="teal.500">Express Js</Link>, <Link href="https://reactjs.org/" isExternal color="teal.500">React Js</Link>, <Link href="https://redux-saga.js.org/" isExternal color="teal.500">Redux</Link> and <Link href="https://graphql.org/" isExternal color="teal.500">GraphQL</Link>. 
+                                After that I tried to learn other things like  <Link href="https://expressjs.com/" isExternal color="teal.500" aria-label="link-express">Express Js</Link>, <Link href="https://reactjs.org/" isExternal color="teal.500" aria-label="link-react">React Js</Link>, <Link href="https://redux-saga.js.org/" isExternal color="teal.500" aria-label="link-redux">Redux</Link> and <Link href="https://graphql.org/" isExternal color="teal.500" aria-label="link-graphql">GraphQL</Link>. 
                                 I'm currently using Vue Js and Golang as main stack as well as PostgreSQL and MongoDB 
                                 databases in my current job. So this is stack that i use in development:
                             </Text>
