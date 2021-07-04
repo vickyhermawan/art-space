@@ -12,17 +12,17 @@ const MenuItems: React.FC = ({ children }) => {
     React.useEffect(() => {
         if(colorMode === "light"){
             if(router.asPath === '/' && children === 'Home'){
-                setColor("teal")
+                setColor("blue.600")
             }else if(router.asPath === `/${string.toLowerCase()}`){
-               setColor("teal")
+               setColor("blue.600")
             }else{
                setColor("gray.800")
             }
         }else{
             if(router.asPath === '/' && children === 'Home'){
-                setColor("teal.200")
+                setColor("blue.200")
             }else if(router.asPath === `/${string.toLowerCase()}`){
-               setColor("teal.200")
+               setColor("blue.200")
             }else{
                setColor("white")
             }

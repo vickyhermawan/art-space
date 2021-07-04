@@ -10,19 +10,19 @@ const Footer: React.FC = ({children}) => {
                 <Center mb={2}>
                     <Stack direction="row" spacing={4}>
                         <Link href="https://twitter.com/vihermawan" isExternal aria-label="link-twitter">
-                            <Button colorScheme="teal" variant="outline" size="xs" aria-label="button-twitter">
+                            <Button colorScheme="blue" variant="outline" size="xs" aria-label="button-twitter">
                                 <FaTwitter />
                             </Button>
                         </Link>
                         <Link href="https://www.linkedin.com/in/vicky-hermawan/" isExternal aria-label="link-linkedin">
-                            <Button colorScheme="teal" variant="outline" size="xs" aria-label="button-linkedin">
+                            <Button colorScheme="blue" variant="outline" size="xs" aria-label="button-linkedin">
                                 <FaLinkedin />
                             </Button>
                         </Link>
                     </Stack>
                 </Center>
                 <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"xs", md:"sm"}} fontWeight="medium">Vihermawan™ 2021 </Text>
-                <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"xs", md:"sm"}} fontWeight="medium"> Develop use <Link color="teal.500" href="https://nextjs.org/">Next Js</Link>, <Link color="teal.500" href="https://chakra-ui.com">Chakra UI</Link> and Hosted on <Link color="teal.500" href="https://vercel.com">Vercel</Link> </Text>
+                <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"xs", md:"sm"}} fontWeight="medium"> Develop use <Link color="blue.600" href="https://nextjs.org/">Next Js</Link>, <Link color="blue.600" href="https://chakra-ui.com">Chakra UI</Link> and Hosted on <Link color="blue.600" href="https://vercel.com">Vercel</Link> </Text>
             </Box>
         </>
     );

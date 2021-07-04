@@ -3,6 +3,7 @@ const runtimeCaching = require('next-pwa/cache')
 const prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
+    trailingSlash: true,
     webpack(config, options) {
       config.module.rules.push({
         test: /\.(ogg|mp3|wav|mpe?g)$/i,

@@ -31,7 +31,7 @@ export default function IntoduceSelf({listStack}: ListStackProps){
                     </GridItem>
                     <GridItem rowSpan={3} colSpan={{ base: 8, md: 6 }} w="full" textAlign={{ base: "center", md: "left" }}>
                         <Fade duration={500} distance="30px" delay={300} fraction={0.4} bottom>
-                            <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "xs", md: "xs", lg: "sm" }} textAlign={{ base: "center", md: "justify" }}>
+                            <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "xs", md: "xs", lg: "sm" }} textAlign={{ base: "center", md: "justify" }} >
                                 Hello, I'm Vicky Hermawan, who can be called Vicky. Currently, i am domiciled in Yogyakarta 
                                 and studying at <Link href="https://ugm.ac.id/" isExternal color="teal.500" aria-label="link-ugm">Gadjah Mada University</Link> and working at a fintech company in Yogyakarta. 
                                 I started working for the first time using the php programming language and the <Link href="https://laravel.com/" isExternal color="teal.500">Laravel</Link> framework. 
@@ -53,7 +53,7 @@ export default function IntoduceSelf({listStack}: ListStackProps){
                     {
                         (listStack ?? []).map(({ title,stacks },index) => {
                             return (
-                                <GridItem rowSpan={3} colSpan={{ base: 6, md: 4 }} w="full" position={{ base: "relative" }}>
+                                <GridItem rowSpan={3} colSpan={{ base: 6, md: 4 }} w="full" position={{ base: "relative" }} key={title}>
                                     <Fade duration={500} distance="30px" delay={300} fraction={0.4} bottom>
                                         <Heading as="h1"letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "xs", md: "xs", lg: "lg" }}>
                                             {title}
@@ -61,7 +61,7 @@ export default function IntoduceSelf({listStack}: ListStackProps){
                                         <List spacing={1}>
                                             {(stacks ?? []).map(({ stack }) => (
                                                 <ListItem>
-                                                    <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "xs", md: "xs", lg: "sm" }}>{stack}</Text>
+                                                    <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "xs", md: "xs", lg: "sm" }} color="gray.500">{stack}</Text>
                                                 </ListItem>
                                             ))}
                                         </List>

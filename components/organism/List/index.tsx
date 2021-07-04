@@ -37,6 +37,7 @@ export default function ListPortofolio({portofolio}: PortofolioProps){
                                 pt="3" 
                                 pb="3"
                                 gap={4}
+                                key={title}
                             >
                                 <GridItem rowSpan={3} colSpan={{base: 12, sm : 8}}>
 
@@ -47,6 +48,7 @@ export default function ListPortofolio({portofolio}: PortofolioProps){
                                             width='full'
                                             variant='regular'
                                             pb={2}
+                                            color="gray.500"
                                         >
                                         {description}
                                         </Text>

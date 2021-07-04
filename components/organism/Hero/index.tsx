@@ -8,7 +8,7 @@ import { Container, Box, Heading, Link, Text,Stack, Button,Center } from "@chakr
 
 const Hero : React.FC = props =>{
 
-    const [play, { stop }] = useSound("/sounds/pop.mp3");
+    const [play] = useSound("/sounds/pop.mp3");
 
     return (
         <>
@@ -16,22 +16,22 @@ const Hero : React.FC = props =>{
                 <Box mt={{base:"44", md:"28", lg:"10"}}>
                     <Fade duration={500} distance="30px" fraction={0.4} bottom>
                         <Heading as="h1" textAlign="center" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"xl", md:"3xl", sm:"xl", lg:"6xl"}}>
-                            Welcome to Vihermawan's, He is a  <Link className={style.transition} href="#" bgClip="text">Developer</Link> also <Link className={style.transition} href="#" bgClip="text">Student</Link> who love to learn new things 
+                            Welcome to Vihermawan's, He is a <Link className={style.transition} href="#" bgClip="text">Developer</Link> also <Link className={style.transition} href="#" bgClip="text">Student</Link> who love to learn new things 
                         </Heading>
                     </Fade>
                     <Fade duration={600} distance="30px" fraction={0.4} bottom>
-                        <Text textAlign="center" mt={{ base :"1.5"}} fontSize={{ base :"small", md:"medium", lg:"medium"}}> He also a workaholic person, and have 2 experience as Fullstack Developer. If you have any chance to collaborate or project he will glad to hear it.</Text>
+                        <Text textAlign="center" mt={{ base :"1.5"}} fontSize={{ base :"small", md:"medium", lg:"medium"}} color="gray.500"> He also a workaholic person, and have 2 experience as Fullstack Developer. If you have any chance to collaborate or project he will glad to hear it.</Text>
                     </Fade>
                     <Fade duration={700} distance="30px" fraction={0.4} bottom>
                         <Center mt="2.5">
                             <Stack direction="row" spacing={4}>
                                 <Link href="https://drive.google.com/file/d/1s1ePLn7bXT3M25hLKPybgU66O5xnRCca/view" isExternal aria-label="link-portofolio">
-                                    <Button leftIcon={<DownloadIcon />} colorScheme="teal" variant="solid" size="sm" onClick={()=> play()} aria-label="button-hero">
+                                    <Button leftIcon={<DownloadIcon />} colorScheme="blue" variant="solid" size="sm" onClick={()=> play()} aria-label="button-hero">
                                         Portofolio
                                     </Button>
                                 </Link>
                                 <Link href="https://twitter.com/vihermawan" isExternal aria-label="link-twitter">
-                                    <Button rightIcon={<FaTwitter />} colorScheme="teal" variant="outline" size="sm" onClick={()=> play()} aria-label="button-hero">
+                                    <Button rightIcon={<FaTwitter />} colorScheme="blue" variant="outline" size="sm" onClick={()=> play()} aria-label="button-hero">
                                         Connect
                                     </Button>
                                 </Link>
