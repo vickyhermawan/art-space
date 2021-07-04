@@ -1,6 +1,8 @@
 import React from "react";
-import Layout from "@components/organism/Layout/Layout";
-import Hero from "@components/organism/Hero/index";
+import dynamic from 'next/dynamic';
+
+const Hero = dynamic(() => import('@components/organism/Hero/index'));
+const Layout = dynamic(() => import('@components/organism/Layout/Layout'));
 
 const Index: React.FC = ({ children }) => {
     return (

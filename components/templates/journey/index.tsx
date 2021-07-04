@@ -1,8 +1,11 @@
 import React from "react";
-import Layout from "@components/organism/Layout/Layout";
-import Title from "@components/organism/Title/index";
-import Timeline from "@components/organism/Timeline/index";
 import Journey from "@data/journey";
+
+import dynamic from 'next/dynamic';
+
+const Title = dynamic(() => import('@components/organism/Title/index'));
+const Layout = dynamic(() => import('@components/organism/Layout/Layout'));
+const Timeline = dynamic(() => import('@components/organism/Timeline/index'));
 
 const Index: React.FC = ({ children }) => {
     return (

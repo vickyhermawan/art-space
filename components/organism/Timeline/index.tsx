@@ -1,8 +1,10 @@
 import React from "react";
+import dynamic from 'next/dynamic';
 import Fade from 'react-reveal/Fade';
 import {TimelineProps} from '@components/organism/Timeline/type';
-import Achievement from '@components/organism/Achievement/index';
 import { List, ListItem, VStack,Container,Heading } from '@chakra-ui/react';
+
+const Achievement = dynamic(() => import('@components/organism/Achievement/index'));
 
 export default function Timeline ({timeline}:TimelineProps) {
     return(

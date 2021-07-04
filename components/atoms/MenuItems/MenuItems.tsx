@@ -6,7 +6,7 @@ const MenuItems: React.FC = ({ children }) => {
     const router = useRouter();
     let string = String(children);
     const [color, setColor] = React.useState<string>('')
-    const { colorMode, toggleColorMode } = useColorMode();
+    const { colorMode } = useColorMode();
 
 
     React.useEffect(() => {

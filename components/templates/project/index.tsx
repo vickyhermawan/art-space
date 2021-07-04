@@ -1,8 +1,10 @@
 import React from "react";
-import Layout from "@components/organism/Layout/Layout";
-import Title from "@components/organism/Title/index";
-import Project from "@components/organism/List/index";
+import dynamic from 'next/dynamic';
 import Portofolio from "@data/portofolio";
+
+const Title = dynamic(() => import('@components/organism/Title/index'));
+const Project = dynamic(() => import('@components/organism/List/index'));
+const Layout = dynamic(() => import('@components/organism/Layout/Layout'));
 
 
 const Index: React.FC = ({ children }) => {

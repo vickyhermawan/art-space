@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import useSound from 'use-sound';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure, Spacer, Kbd } from '@chakra-ui/react';
 import {
     Modal,
@@ -17,12 +18,9 @@ const Header: React.FC = props => {
     const router = useRouter();
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [scrollActive, setScrollActive] = useState<Boolean>(false);
+    const [play] = useSound("/sounds/pop.mp3");
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            setScrollActive(window.scrollY > 20);
-        });
         window.addEventListener('keypress', e => {
             if(e.key === 'H' || e.key === 'h'){
                 onClose();
@@ -39,6 +37,11 @@ const Header: React.FC = props => {
             }
         });
     }, []);
+
+    const handleDarkMode = () => {
+        play();
+        toggleColorMode();
+    }
 
     return (
         <>
@@ -83,10 +86,10 @@ const Header: React.FC = props => {
                     mt={{ base: 4, md: 0 }}
                     alignContent="center"
                 >
-                    <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />} onClick={toggleColorMode} aria-label="button" />
+                    <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />} onClick={()=>handleDarkMode()} aria-label="button" />
                 </Box>
                 <Box display={{ base: "block", md: "none", lg: "none" }}>
-                    <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />} onClick={toggleColorMode} aria-label="button" />
+                    <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />} onClick={()=>handleDarkMode()} aria-label="button" />
                     <Button size="xs" bg="transparent" onClick={onOpen}>👋</Button>
                 </Box>
             </Flex>

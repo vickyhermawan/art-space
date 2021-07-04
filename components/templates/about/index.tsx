@@ -1,8 +1,10 @@
 import React from "react";
-import Layout from "@components/organism/Layout/Layout";
-import Title from "@components/organism/Title/index";
-import Introduce from "@components/organism/IntroduceSelf/index";
+import dynamic from 'next/dynamic';
 import ListStack from "@data/stack";
+
+const Title = dynamic(() => import('@components/organism/Title/index'));
+const Layout = dynamic(() => import('@components/organism/Layout/Layout'));
+const Introduce = dynamic(() => import('@components/organism/IntroduceSelf/index'));
 
 const Index: React.FC = ({ children }) => {
     return (

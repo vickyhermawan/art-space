@@ -1,7 +1,9 @@
 import React from "react";
 import Head from 'next/head';
-import Header from "@components/organism/Header/Header";
-import Footer from "@components/organism/Footer/Footer";
+import dynamic from 'next/dynamic';
+const Header = dynamic(() => import('@components/organism/Header/Header'));
+const Footer = dynamic(() => import('@components/organism/Footer/Footer'));
+const SrcollTop = dynamic(() => import('@components/atoms/ScrollTop/ScrolTop'));
 
 const Layout = ({ children }) => {
   return (
@@ -35,6 +37,7 @@ const Layout = ({ children }) => {
       </Head>
       <Header />
       {children}
+      <SrcollTop />
       <Footer/>
     </>
   );
