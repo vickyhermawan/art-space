@@ -1,9 +1,10 @@
 import React from "react";
 import {AchievementsProps} from '@components/organism/Timeline/type';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { List, HStack, ListItem, VStack, Flex,Text,Heading,Center,Circle } from '@chakra-ui/react';
+import { List, HStack, ListItem, VStack, Flex,Text,Heading,Center,Circle,useColorMode } from '@chakra-ui/react';
 
 export default function Achievements ({ achievements }: AchievementsProps) {
+  const { colorMode } = useColorMode();
     return (
       <List paddingBottom={4}>
         {
@@ -64,7 +65,7 @@ export default function Achievements ({ achievements }: AchievementsProps) {
                       width='full'
                       variant='regular'
                       textAlign='left'
-                      color="gray.500"
+                      color={colorMode === "light" ? "gray.600" : "gray.300"}
                     >
                       {description}
                     </Text>

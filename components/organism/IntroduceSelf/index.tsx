@@ -1,9 +1,10 @@
 import React from "react";
 import Fade from 'react-reveal/Fade';
 import {ListStackProps} from '@components/organism/IntroduceSelf/type';
-import { Container,Grid, GridItem,Image,Text,Heading, List, ListItem,Link } from "@chakra-ui/react";
+import { Container,Grid, GridItem,Image,Text,Heading, List, ListItem,Link,useColorMode } from "@chakra-ui/react";
 
 export default function IntoduceSelf({listStack}: ListStackProps){
+    const { colorMode } = useColorMode();
     return (
         <> 
             <Container maxW="5xl" centerContent paddingLeft={{ base :"7", md:"20", lg:"40"}} paddingRight={{ base :"7", md:"20", lg:"40"}} paddingBottom={{ base :"10"}}>
@@ -53,7 +54,7 @@ export default function IntoduceSelf({listStack}: ListStackProps){
                     {
                         (listStack ?? []).map(({ title,stacks },index) => {
                             return (
-                                <GridItem rowSpan={3} colSpan={{ base: 6, md: 4 }} w="full" position={{ base: "relative" }} key={title}>
+                                <GridItem rowSpan={3} colSpan={{ base: 6, md: 4 }} w="full" position={{ base: "relative" }} key={index}>
                                     <Fade duration={500} distance="30px" delay={300} fraction={0.4} bottom>
                                         <Heading as="h1"letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "xs", md: "xs", lg: "lg" }}>
                                             {title}
@@ -61,7 +62,7 @@ export default function IntoduceSelf({listStack}: ListStackProps){
                                         <List spacing={1}>
                                             {(stacks ?? []).map(({ stack }) => (
                                                 <ListItem>
-                                                    <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "xs", md: "xs", lg: "sm" }} color="gray.500">{stack}</Text>
+                                                    <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "xs", md: "xs", lg: "sm" }} color={colorMode === "light" ? "gray.600" : "gray.300"}>{stack}</Text>
                                                 </ListItem>
                                             ))}
                                         </List>

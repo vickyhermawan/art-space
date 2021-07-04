@@ -2,9 +2,10 @@ import React from "react";
 import Fade from 'react-reveal/Fade';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import {PortofolioProps} from '@components/organism/List/type';
-import { Container, Flex,Grid, GridItem,Heading,Image,Text ,Box,Tag,List,ListItem,Link } from "@chakra-ui/react";
+import { Container, Flex,Grid, GridItem,Heading,Image,Text ,Box,Tag,List,ListItem,Link,useColorMode } from "@chakra-ui/react";
 
 export default function ListPortofolio({portofolio}: PortofolioProps){
+    const { colorMode } = useColorMode();
     return (
         <> 
             <Container maxW="6xl" centerContent paddingLeft={{ base :"7", md:"20", lg:"40"}} paddingRight={{ base :"7", md:"20", lg:"40"}} paddingBottom={{ base :"10"}}>
@@ -40,15 +41,14 @@ export default function ListPortofolio({portofolio}: PortofolioProps){
                                 key={title}
                             >
                                 <GridItem rowSpan={3} colSpan={{base: 12, sm : 8}}>
-
-                                    <Box p="2">
+                                    <Box p="2" key={title}>
                                         <Link href={link} isExternal aria-label={title}><Heading size="md">{title} <ExternalLinkIcon w={4} h={4}/></Heading></Link>
                                         <Text
                                             fontSize={{base: "small", md:"medium"}}
                                             width='full'
                                             variant='regular'
                                             pb={2}
-                                            color="gray.500"
+                                            color={colorMode === "light" ? "gray.600" : "gray.300"}
                                         >
                                         {description}
                                         </Text>

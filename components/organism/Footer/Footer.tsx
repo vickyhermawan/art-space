@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Link, Text,Stack, Button, Center } from '@chakra-ui/react';
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
-import { EmailIcon } from '@chakra-ui/icons';
 
 const Footer: React.FC = ({children}) => {
     return (
@@ -10,12 +9,12 @@ const Footer: React.FC = ({children}) => {
                 <Center mb={2}>
                     <Stack direction="row" spacing={4}>
                         <Link href="https://twitter.com/vihermawan" isExternal aria-label="link-twitter">
-                            <Button colorScheme="blue" variant="outline" size="xs" aria-label="button-twitter">
+                            <Button colorScheme="facebook" variant="outline" size="xs" aria-label="button-twitter">
                                 <FaTwitter />
                             </Button>
                         </Link>
                         <Link href="https://www.linkedin.com/in/vicky-hermawan/" isExternal aria-label="link-linkedin">
-                            <Button colorScheme="blue" variant="outline" size="xs" aria-label="button-linkedin">
+                            <Button colorScheme="facebook" variant="outline" size="xs" aria-label="button-linkedin">
                                 <FaLinkedin />
                             </Button>
                         </Link>

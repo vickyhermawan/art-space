@@ -4,11 +4,12 @@ import Fade from 'react-reveal/Fade';
 import { FaTwitter } from 'react-icons/fa';
 import { DownloadIcon } from '@chakra-ui/icons';
 import style from '@styles/Gradient.module.css';
-import { Container, Box, Heading, Link, Text,Stack, Button,Center } from "@chakra-ui/react";
+import { Container, Box, Heading, Link, Text,Stack, Button,Center,useColorMode } from "@chakra-ui/react";
 
 const Hero : React.FC = props =>{
 
     const [play] = useSound("/sounds/pop.mp3");
+    const { colorMode } = useColorMode();
 
     return (
         <>
@@ -20,18 +21,18 @@ const Hero : React.FC = props =>{
                         </Heading>
                     </Fade>
                     <Fade duration={600} distance="30px" fraction={0.4} bottom>
-                        <Text textAlign="center" mt={{ base :"1.5"}} fontSize={{ base :"small", md:"medium", lg:"medium"}} color="gray.500"> He also a workaholic person, and have 2 experience as Fullstack Developer. If you have any chance to collaborate or project he will glad to hear it.</Text>
+                        <Text textAlign="center" mt={{ base :"1.5"}} fontSize={{ base :"small", md:"medium", lg:"medium"}} color={colorMode === "light" ? "gray.600" : "gray.300"}> He also a workaholic person, and have 2 experience as Fullstack Developer. If you have any chance to collaborate or project he will glad to hear it.</Text>
                     </Fade>
                     <Fade duration={700} distance="30px" fraction={0.4} bottom>
-                        <Center mt="2.5">
+                        <Center mt="4">
                             <Stack direction="row" spacing={4}>
                                 <Link href="https://drive.google.com/file/d/1s1ePLn7bXT3M25hLKPybgU66O5xnRCca/view" isExternal aria-label="link-portofolio">
-                                    <Button leftIcon={<DownloadIcon />} colorScheme="blue" variant="solid" size="sm" onClick={()=> play()} aria-label="button-hero">
+                                    <Button leftIcon={<DownloadIcon />} colorScheme="facebook" variant="solid" size="sm" onClick={()=> play()} aria-label="button-hero">
                                         Portofolio
                                     </Button>
                                 </Link>
                                 <Link href="https://twitter.com/vihermawan" isExternal aria-label="link-twitter">
-                                    <Button rightIcon={<FaTwitter />} colorScheme="blue" variant="outline" size="sm" onClick={()=> play()} aria-label="button-hero">
+                                    <Button rightIcon={<FaTwitter />} colorScheme="facebook" variant="outline" size="sm" onClick={()=> play()} aria-label="button-hero">
                                         Connect
                                     </Button>
                                 </Link>
