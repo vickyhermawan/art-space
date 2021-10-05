@@ -13,8 +13,8 @@ const Hero : React.FC = props =>{
 
     return (
         <>
-            <Container maxW="7xl" centerContent paddingTop={{ base :"7", md:"20", lg:"40"}} paddingLeft={{ base :"7", md:"20", lg:"40"}} paddingRight={{ base :"7", md:"20", lg:"40"}} paddingBottom={{ base :"20"}} minH="90vh">
-                <Box mt={{base:"44", md:"28", lg:"10"}}>
+            <Container maxW="7xl" centerContent paddingTop={{ base :"7", md:"20", lg:"40"}} paddingLeft={{ base :"7", md:"20", lg:"40"}} paddingRight={{ base :"7", md:"20", lg:"40"}} paddingBottom={{ base :"20"}} minH="88vh">
+                <Box mt={{base:"44", md:"24"}}>
                     <Fade duration={500} distance="30px" fraction={0.4} bottom>
                         <Heading as="h1" textAlign="center" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"xl", md:"3xl", sm:"xl", lg:"6xl"}}>
                             Welcome to Vihermawan's, He is a <Link className={style.transition} href="#" bgClip="text">Developer</Link> also <Link className={style.transition} href="#" bgClip="text">Student</Link> who love to learn new things 
